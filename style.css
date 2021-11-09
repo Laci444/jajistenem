@@ -1,0 +1,120 @@
+*{
+    height: 100%;
+    margin: 0;
+    font-family: 'MedievalSharp', cursive;
+}
+html{
+    background-color: black;
+}
+.game{
+    width: 170vh;
+    margin: auto;
+    background-color: lightblue;
+}
+.nav{
+    background-color: grey;
+    width: 20%;
+    text-align: center;
+    float: left;
+}
+.nav-button{
+    width: 70%;
+    height: 4%;
+    margin-bottom: 15%;
+    font-size: 100%;
+    background-color: darkolivegreen;
+    color: darkgrey;
+    border-radius: 10px;
+}
+.character{
+    height: 20%;
+    margin-bottom: 15%;
+}
+.nav-gold{
+    height: 2%;
+    width: 50%;
+    display: inline;
+    color: gold;
+    font-size: 150%;
+}
+.x{
+    background-color: grey;
+    width: 3%;
+    height: 5%;
+    right: 1px;
+    float: right;
+    font-size: 200%;
+    position: relative;
+    margin-bottom: -5%;
+}
+.container{
+    width: 80%;
+    float: right;
+}
+.face, .inv{
+    width: 50%;
+}
+.face{
+    float: left;
+    text-align: center;
+}
+.inv{
+    float: right;
+    text-align: center;
+}
+.picture{
+    height: 40%;
+    margin-top: 5%;
+}
+.picture img, .helmet img, .chestplate img, .leggings img, .boots img, .sword img, .shield img{
+    background-color:cadetblue;
+    border-radius: 10px;
+    padding: 1%;
+}
+.helmet, .chestplate, .leggings, .boots{
+    height: 15%;
+    margin-top: 15%;
+}
+.armor{
+    float: left;
+    width: 50%;
+    height: 50%;
+}
+.weapon{
+    float: right;
+    width: 50%;
+    height: 50%;
+}
+.sword, .shield{
+    height: 15%;
+    margin-top: 40%;
+}
+.stats, .items{
+    height: 40%;
+    margin: 0;
+}
+.stats{
+    display: inline;
+}
+.stats div{
+    display: block;
+    height: 5%;
+    font-size: 200%;
+    width: 40%;
+    margin: auto;
+    margin-top: 7%;
+    background-color: cadetblue;
+    padding: 1%;
+    border-radius: 5px;
+}
+.stats div p{
+    text-align: left;
+    width: 70%;
+    float: left;
+    padding-top: 3%;
+}
+.stats div span{
+    text-align: right;
+    color: gold;
+    width: 10%;
+}

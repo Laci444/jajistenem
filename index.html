@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RöPöGö</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="game">
+        <div class="x" onclick="home_view()">&#10060;</div>
+        <div class="nav">
+            <div class="character">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png"
+                    title="Karakter statisztika" id="char-img" onclick="stats_view()">
+            </div>
+            <button class="nav-button">Küldetéses tábla</button>
+            <button class="nav-button">Kűzdőtér</button>
+            <button class="nav-button">Piac</button>
+            <button class="nav-button">Sunyuló ürge a sarokban</button>
+            <br>
+            <p class="nav-gold"><span id="gold">10</span> arany</p>
+        </div>
+        <div class="container" id="container">
+        </div>
+    </div>
+
+    <script src="stats.js"></script>
+    <script src="game.js"></script>
+    <script src="pages.js"></script>
+</body>
+
+</html>
