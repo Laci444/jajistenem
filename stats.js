@@ -50,7 +50,7 @@ class Player extends Entity {
         return (-(50 / (1.025 ** this.dexterity)) + 50).toFixed(2)
     }
     get get_crit(){
-        return (-(100 / (1.02 ** this.intelligence)) + 100).toFixed(2)
+        return (-(90 / (1.02 ** this.intelligence)) + 90).toFixed(2)
     }
     get get_def(){
         return (-(50 / (1.02 ** this.endurance)) + 50).toFixed(2)
