@@ -1,2 +1,3 @@
-let gazsi = new Player("Gáspár")
-gazsi.available = 3
+let jatekos = new Player()
+
+jatekos.hp = 40

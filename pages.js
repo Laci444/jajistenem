@@ -10,7 +10,13 @@ function stats_view() {
     <div class="face">
                 <div class="picture">
                     <img
-                        src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png">
+                        src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png" title="Jelenlegi szinted: ${jatekos.lvl}">
+                    
+                        <div class="hp-bar-outer">
+                            <div id="hp-bar-inner">
+                                <span id="hp-bar">${jatekos.max_hp}/${jatekos.hp}</span>
+                            </div>
+                        </div>
                 </div>
                 <div class="armor">
                     <div class="helmet">
@@ -39,17 +45,17 @@ function stats_view() {
             </div>
             <div class="inv">
                 <div class="stats" id="stats">
-                    <div class="strength" id="strengthDiv">
-                        <p>Erő: </p><span id="stength">${gazsi.strength}</span>
+                    <div class="strength" id="strengthDiv" title="Sebzés: ${jatekos.get_dmg}">
+                        <p>Erő: </p><span id="stength">${jatekos.strength}</span>
                     </div>
-                    <div class="dexterity" id="dexterityDiv">
-                        <p>Ügyesség: </p><span id="dexterity">${gazsi.dexterity}</span>
+                    <div class="dexterity" id="dexterityDiv" title="Kitérési esély: ${jatekos.get_dodge}%">
+                        <p>Ügyesség: </p><span id="dexterity">${jatekos.dexterity}</span>
                     </div>
-                    <div class="intelligence" id="intelligenceDiv">
-                        <p>Értelem: </p><span id="intelligence">${gazsi.intelligence}</span>
+                    <div class="intelligence" id="intelligenceDiv" title="Kritikus találat esély: ${jatekos.get_crit}%">
+                        <p>Értelem: </p><span id="intelligence">${jatekos.intelligence}</span>
                     </div>
-                    <div class="endurance" id="enduranceDiv">
-                        <p>Kitartás: </p><span id="endurance">${gazsi.endurance}</span>
+                    <div class="endurance" id="enduranceDiv" title="Védelem: ${jatekos.get_def}%">
+                        <p>Kitartás: </p><span id="endurance">${jatekos.endurance}</span>
                     </div>
                 </div>
                 <div class="items">
@@ -57,13 +63,16 @@ function stats_view() {
                 </div>
             </div>
     `
-    if(gazsi.available) {
+    if(jatekos.available) {
         let stats = document.getElementById("stats")
         for (const div in stats.children) {
             let temp = stats.children[div]
-            temp.onclick = () => {gazsi.addPoint(temp.className)}
+            if(typeof(temp) != typeof({})) continue
+            temp.onclick = () => {jatekos.addPoint(temp.className)}
             temp.style.backgroundColor = "green"
+            temp.style.cursor = "pointer"
         }
         
     }
+    document.getElementById("hp-bar-inner").style.width = jatekos.hp / jatekos.max_hp * 100 + "%"
 }
